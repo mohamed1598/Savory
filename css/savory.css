@@ -1,0 +1,133 @@
+*{
+    font-family: 'Cabin Condensed', sans-serif;
+}
+@keyframes goUp{
+    0%{transform: translateY(-700px);}
+    100%{transform: translateY(0);}
+}
+.container{
+    /* transition:all 2s ease-in-out; */
+    animation: 1s ease-out 0s 1 goUp;
+}
+header{
+    width: 17%;
+    position: fixed;
+    height: 100%;
+    padding: 3%;
+    /* font-size: .7rem!important; */
+}
+.header{
+    width: 17%;
+    height: 100%;
+    padding: 3%;
+    background: inherit;
+}
+header h1{
+    font-size: 1.3rem!important;
+}
+header p{
+    color: #555555;
+    line-height: 1.6rem;
+}
+header ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+header ul li{
+    margin:1rem 0;
+}
+header ul li a , header p a {
+    text-decoration: none;
+    color: #000;
+}
+header .icons{
+    margin-top: 35%;
+}
+header .icons a{
+    text-decoration: none;
+    color: #000;
+    margin-right: 10%;
+}
+
+.gallery{
+    margin-left: 22%;
+    padding-top:3% ;
+}
+.gallery article{
+    width :30%;
+    float:left;
+    margin-right: 10px;
+}
+.gallery article .card{
+    width: 100%;
+    margin-top:10px;
+    position: relative;
+    /* margin:10px; */
+}
+.gallery article .card img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.gallery article .card .outertext{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin: 3%;
+    padding: 3%;
+    width: 88%;
+    height: 88%;
+    background-color: white;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+.gallery article .card:hover .outertext{
+    opacity: 1;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition:all 0.6s ease-in-out;
+}
+.gallery article .card:hover .outertext .textContainer p{
+    color: red;
+}
+.textContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: auto;
+}
+.textContainer .innertext{
+    position: absolute;
+    top:35%;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+}
+@media(max-width : 900px){
+    header{
+        width: 30%;
+    }
+    .gallery{
+        margin-left: 33%;
+    }
+    .gallery article{
+        width: 98%;
+    }
+}
+@media(max-width : 500px){
+    header{
+        width: 100%;
+        position : relative;
+        text-align: center;
+    }
+    .gallery{
+        margin-left:0;
+    }
+    .gallery article{
+        width: 98%;
+        margin-left:1%;
+    }
+}
